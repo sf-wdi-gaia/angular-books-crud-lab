@@ -4,25 +4,25 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
 
-      <form class="form-horizontal" ng-submit="albumsIndexCtrl.createAlbum()">
+      <form class="form-horizontal" ng-submit="booksIndexCtrl.createBook()">
         <fieldset>
 
           <!-- Form Name -->
-          <legend>Add New Album</legend>
+          <legend>Add New Book</legend>
 
           <!-- Text input-->
           <div class="form-group">
-            <label class="col-md-4 control-label">Album Name</label>
+            <label class="col-md-4 control-label">Title</label>
             <div class="col-md-4">
-            <input id="name" ng-model="albumsIndexCtrl.newAlbum.name" type="text" class="form-control input-md" required="">
+            <input id="title" ng-model="booksIndexCtrl.newBook.title" type="text" class="form-control input-md" required="">
             </div>
           </div>
 
           <!-- Text input-->
           <div class="form-group">
-            <label class="col-md-4 control-label">Artist Name</label>
+            <label class="col-md-4 control-label">Author</label>
             <div class="col-md-4">
-            <input ng-model="albumsIndexCtrl.newAlbum.artistName" type="text" class="form-control input-md">
+            <input ng-model="booksIndexCtrl.newBook.author" type="text" class="form-control input-md">
             </div>
           </div>
 
