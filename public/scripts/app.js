@@ -12,12 +12,12 @@ config.$inject = ['$routeProvider', '$locationProvider'];
 function config(   $routeProvider,  $locationProvider   ) {
   $routeProvider
     .when('/', {
-      templateUrl: '/public/templates/books-all',
+      templateUrl: '/views/templates/books-all.html',
       controllerAs: 'BooksShowCtrl',
       controller: 'BooksShowController'
     })
     .when('/books/:id', {
-      templateUrl: '/public/templates/books-detail',
+      templateUrl: '/views/templates/books-detail.html',
       controllerAs: 'BooksDetailCtrl',
       controller: 'BooksDetailController'
     })
