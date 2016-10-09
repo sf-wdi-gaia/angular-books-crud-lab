@@ -1,45 +1,25 @@
 angular
-	.module('library', [])
-	.controller('LibraryController', LibraryController);
+	.module('library', ['ngRoute'])
+	.config(config);
+	//.controller('LibraryController', LibraryController);
 
-LibraryController.$inject = ['$http'];
+config.$inject = ['$routeProvider', '$locationProvider'];
 
-function LibraryController ($http)
-{
-	var vm = this;
-	vm.books = [];
-	vm.newBook = 
-	{
-		name: "",
-		author: "",
-		image: "",
-		releaseDate: ""
-	}
-	$http(
-	{
-		method: 'GET',
-		url: "https://super-crud.herokuapp.com/books"
-	}).then(function success(response)
-		{
-			//console.log(response.data);
-			vm.books = response.data.books;
-			console.log(vm.books);
-		}, function errorCallback(response) 
-		{
-    		console.log('There was an error getting the data', response);
-  		});
+function config ($routeProvider, $locationProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'templates/library',
+      controllerAs: 'Library',
+      controller: 'LibraryController'
+    })
+    .when('/albums/:id', {
+      templateUrl: '/templates/book',
+      controllerAs: 'Book',
+      controller: 'BookController'
+    })
 
-	vm.createBook = function()
-	{
-		$http({
-	      method: 'POST',
-	      url: 'https://super-crud.herokuapp.com/books',
-	      data: vm.newBook,
-	    }).then(function successCallback(response) {
-	      vm.books.push(response.data);
-	    }, function errorCallback(response) {
-	      console.log('There was an error posting the data', response);
-	    });
-	}
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: false
+  });
 }
-
