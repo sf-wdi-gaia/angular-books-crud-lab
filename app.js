@@ -1,7 +1,6 @@
 angular
-	.module('library', ['ngRoute'])
+	.module('libraryApp', ['ngRoute'])
 	.config(config);
-	//.controller('LibraryController', LibraryController);
 
 config.$inject = ['$routeProvider', '$locationProvider'];
 
@@ -12,11 +11,14 @@ function config ($routeProvider, $locationProvider) {
       controllerAs: 'Library',
       controller: 'LibraryController'
     })
-    .when('/albums/:id', {
-      templateUrl: '/templates/book',
-      controllerAs: 'Book',
-      controller: 'BookController'
-    })
+    // .when('/books/:id', {
+    //   templateUrl: '/templates/book',
+    //   controllerAs: 'Book',
+    //   controller: 'BookController'
+    // })
+    // .otherwise({
+    //   redirectTo: '/'
+    // });
 
   $locationProvider.html5Mode({
     enabled: true,

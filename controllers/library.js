@@ -1,5 +1,5 @@
 angular
-	.module('library')
+	.module('libraryApp')
 	.controller('LibraryController', LibraryController);
 
 LibraryController.$inject = ['$http'];
