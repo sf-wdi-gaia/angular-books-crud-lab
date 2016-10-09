@@ -11,11 +11,11 @@ function config ($routeProvider, $locationProvider) {
       controllerAs: 'Library',
       controller: 'LibraryController'
     })
-    // .when('/books/:id', {
-    //   templateUrl: '/templates/book',
-    //   controllerAs: 'Book',
-    //   controller: 'BookController'
-    // })
+    .when('/books/:id', {
+      templateUrl: 'templates/books/book.html',
+      controllerAs: 'Book',
+      controller: 'BookController'
+    })
     // .otherwise({
     //   redirectTo: '/'
     // });
