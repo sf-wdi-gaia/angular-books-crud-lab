@@ -31,3 +31,26 @@ app.get('/templates/:name', function templates(req, res) {
 	var name = req.params.name;
 	res.sendFile(_dirname + '/views/templates/' + name + '.html');
 });
+
+
+/*
+ * JSON API 'get' endpoints only for now
+*/
+
+app.get('/api', controllers.books.index);
+
+app.get('/api/books', controllers.books.index);
+
+app.get('*', function homepage (req, res) {
+	res.sendFile(_dirname + '/views/index.html');
+});
+
+
+/**********
+ * SERVER *
+ **********/
+
+// listen on port 3000
+app.listen(process.env.PORT || 3000, function () {
+	console.log('Express server is running on http://localhost:3000/');
+});
