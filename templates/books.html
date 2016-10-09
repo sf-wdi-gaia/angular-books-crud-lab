@@ -53,7 +53,7 @@
     </div>
   </div>
 
-  <input type="text" class="form-control" ng-model="searchText" placeholder="Search Books">
+  <!-- <input type="text" class="form-control" ng-model="searchText" placeholder="Search Books"> -->
   <div ng-repeat="book in booksIndexCtrl.books" class="row">
     <!-- | orderBy: 'name' | filter: searchText -->
     <div class="col-md-10 col-md-offset-1">
@@ -61,8 +61,8 @@
         <div class="panel-body">
 
           <div class='row'>
-            <div class="col-md-3 col-xs-12 thumbnail">
-              <!-- <img src="images/800x800.png" alt="book image"> -->
+            <div class="col-md-9 col-xs-11 thumbnail">
+              <img class="img-limit"src={{book.image}}>
             </div>
 
             <div class="col-md-9 col-xs-12">
@@ -85,21 +85,18 @@
                   <input ng-show="editing" ng-model="book.releaseDate" type="text" class="form-control input-md">
                 </li>
 
-                <li class="list-group-item">
-                  <img class="img-limit"src={{book.image}}>
+                <!-- <li class="list-group-item">
                   <input ng-show="editing" ng-model="book.releaseDate" type="text" class="form-control input-md">
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
 
-          <div class='panel-footer'>
-            <div class='panel-footer'>
-              <button class='btn btn-danger' ng-click="booksIndexCtrl.deleteBook(book)">Delete Book</button>
-              <button class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Book</button>
-              <button class='btn btn-success' ng-show="editing" ng-click="booksIndexCtrl.editBook(book); editing = false">Save Changes</button>
-            </div>
-          </div>
+          <!-- <div class='panel-footer'> -->
+            <button class='btn btn-danger' ng-click="booksIndexCtrl.deleteBook(book)">Delete Book</button>
+            <button class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Book</button>
+            <button class='btn btn-success' ng-show="editing" ng-click="booksIndexCtrl.editBook(book); editing = false">Save Changes</button>
+          <!-- </div> -->
         </div>
       </div>
     </div>

@@ -17,7 +17,7 @@ Location: SF
 
 Deliberate practice is a really effective way to build skills. You've learned about a lot of key pieces of an Angular app, and now it's time to put those pieces together.  You'll be expected to be able to build an Angular app from scratch.
 
-### Overview 
+### Overview
 
 In this lab, you'll be creating a simple library app to keep track of books.
 
@@ -56,7 +56,7 @@ Your finished product will have the following user stories:
 
 * Commit frequently!
 * Once you add client-side routing,  Angular will need to be served from a server. Run `npm install -g budo`, then `budo -P --host=localhost --open` from the Terminal (inside your project directory). This will assume there is an `index.html` in the directory and serve it up! *The `index.html` must be in your main project directory for this server setup.*
-* The books API is RESTful, so follow conventions.  You can test endpoints with [cURL](https://curl.haxx.se/docs/manpage.html) or [Postman](https://www.getpostman.com/), or by setting up a simple request to trigger them. 
+* The books API is RESTful, so follow conventions.  You can test endpoints with [cURL](https://curl.haxx.se/docs/manpage.html) or [Postman](https://www.getpostman.com/), or by setting up a simple request to trigger them.
 * `console.log` or make global the data you get back from each `$http` request!
 * Refer to the previous labs/lessons.
 
@@ -65,3 +65,9 @@ Your finished product will have the following user stories:
 * User can sort the books alphabetically by author name or book title
 * User can search for a specific book
 * User can edit a book's image
+
+
+# Project Plan
+- MVP
+- Style
+- Finish Reqs
