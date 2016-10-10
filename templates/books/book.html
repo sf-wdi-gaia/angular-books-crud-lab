@@ -16,6 +16,7 @@
 			<input ng-show="editing" ng-model="Book.book.releaseDate" type="text" class="form-control input-md">
 		</li>
 		<img src={{Book.book.image}} width="200px" height="300px">
+		<input ng-show="editing" ng-model="Book.book.image" type="text" class="form-control input-md">
 		<li class="list-group-item">
 			<button class='btn btn-danger' ng-click="Book.deleteBook()">Delete Book</button>
 			<button class='btn btn-info' ng-hide="editing" ng-click="editing = true; Book.editReady()">Edit Book</button>

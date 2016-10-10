@@ -36,7 +36,15 @@ function BookController($http, $routeParams)
 
 	vm.editBook = function()
 	{
-		
+		$http({
+		  method: 'PUT',
+		  url: 'https://super-crud.herokuapp.com/books/'+ vm.book._id,
+		  data: vm.book
+		}).then(function successCallback(json) {
+		  window.location.href = '/';
+		}, function errorCallback(response) {
+		  console.log('There was an error deleting the data', response);
+		});
 	}
 
 	vm.editReady = function()
@@ -45,6 +53,7 @@ function BookController($http, $routeParams)
 		vm.oldbook.title = vm.book.title;
 		vm.oldbook.author = vm.book.author;
 		vm.oldbook.releaseDate = vm.book.releaseDate;
+		vm.oldbook.image = vm.book.image;
 	}
 
 	vm.cancelEdit = function()
@@ -52,7 +61,7 @@ function BookController($http, $routeParams)
 		vm.book.title = vm.oldbook.title;
 		vm.book.author = vm.oldbook.author;
 		vm.book.releaseDate = vm.oldbook.releaseDate;
-		
+		vm.book.image = vm.oldbook.image;
 	}
 
 
