@@ -34,7 +34,7 @@ app.get('/templates/:name', function templates(req, res) {
 
 
 /*
- * JSON API 'get' endpoints only for now
+ * JSON API endpoints
 */
 
 app.get('/api', controllers.books.index);
@@ -45,6 +45,9 @@ app.get('*', function homepage (req, res) {
 	res.sendFile(_dirname + '/views/index.html');
 });
 
+app.post('/api/books', controllers.books.create);
+app.delete('/api/books/:bookId', controllers.books.destroy);
+app.put('/api/books/:bookId', controllers.books.update);
 
 /**********
  * SERVER *

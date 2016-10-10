@@ -1,5 +1,5 @@
 angular
-  .module('tunely')
+  .module('angular-books-crud-lab')
   .controller('BooksIndexController', BooksIndexController);
 
 BooksIndexController.$inject = ['$http'];
