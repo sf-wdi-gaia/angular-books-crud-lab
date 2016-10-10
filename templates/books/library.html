@@ -55,7 +55,8 @@
               </div>
             </fieldset>
           </form>
-		<div ng-repeat="book in Library.books | orderBy: 'title'">
+    <input type="text" class="form-control" ng-model="search.title" placeholder="Search Books">
+		<div ng-repeat="book in Library.books | orderBy: 'title' | filter: search">
 			<ul class="list-group form-inline">
 				<li class="list-group-item">
                   	<h4 class='inline-header'>Title:</h4>
