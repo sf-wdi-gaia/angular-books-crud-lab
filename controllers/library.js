@@ -11,11 +11,11 @@ function LibraryController ($http)
 	vm.books = [];
 	vm.newBook = 
 	{
-		name: "",
+		title: "",
 		author: "",
 		image: "",
 		releaseDate: ""
-	}
+	};
 	$http(
 	{
 		method: 'GET',
