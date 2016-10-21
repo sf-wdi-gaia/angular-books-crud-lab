@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bookApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <base href="/angular-books-crud-lab/">
+
+    <title>bookApp</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- VENDOR SCRIPTS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+
+    <!-- APPLICATION SCRIPTS -->
+    <script src="app.js"></script>
+
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome to the BookApp</h1>
+        <p>Your library!</p>
+      </div>
+    </div>
+
+    <div ng-view></div>
+  </body>
+
+</html>
