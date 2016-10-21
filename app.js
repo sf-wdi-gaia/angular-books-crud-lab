@@ -1,28 +1,3 @@
-// testing controllers in different files
-// angular
-//   .module('bookApp', ['ngRoute'])
-//   .config(config);
-
-
-// config.$inject = ['$routeProvider', '$locationProvider'];
-// function config ($routeProvider, $locationProvider) {
-//   $routeProvider
-//     .when('/', {
-//       templateUrl: '/templates/books.html',
-//       controllerAs: 'booksIndexCtrl',
-//       controller: 'BooksIndexController'
-//     })
-//     .when('/books/:id', {
-//       templateUrl: '/templates/books-show.html',
-//       controllerAs: 'booksShowCtrl',
-//       controller: 'BooksIndexController'
-//     })
-
-//     $locationProvider.html5Mode({
-//       enabled: true,
-//       requireBase: false
-//   });
-// }
 
 angular
   .module('bookApp', ['ngRoute'])
@@ -62,7 +37,6 @@ function BooksIndexController ($http) {
     url: 'https://super-crud.herokuapp.com/books'
   }).then(function successCallback(response) {
     vm.books = response.data.books;
-    // console.log(response.data.books)
   }, function errorCallback(response) {
     console.log('There was an error getting the data', response);
   });
@@ -86,7 +60,6 @@ function BooksIndexController ($http) {
       url: 'https://super-crud.herokuapp.com/books/'+book._id,
       data: book
     }).then(function successCallback(json) {
-      // don't need to do anything!
     }, function errorCallback(response) {
       console.log('There was an error editing the data', response);
     });

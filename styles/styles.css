@@ -3,7 +3,6 @@ body {
 }
 
 .image-block {
-  /*margin: 1em 1em 1em 1em;*/
   background: #fff;
   width: 94%;
   padding: 15px 0;
@@ -12,12 +11,9 @@ body {
   border-radius: 5px;
 }
 
-.img-centered {
+.img-detail {
   display: block;
   margin: 0 auto;
-}
-
-.img-limit {
   width: 20vw;
 }
 
